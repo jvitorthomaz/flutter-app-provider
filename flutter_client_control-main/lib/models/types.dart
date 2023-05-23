@@ -15,5 +15,10 @@ class Types extends ChangeNotifier {
     types.add(type);
     notifyListeners();
   }
+
+  void removeTypes(int index) {
+    types.removeAt(index);
+    notifyListeners();
+  }
   
 }

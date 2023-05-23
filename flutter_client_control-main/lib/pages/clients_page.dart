@@ -48,9 +48,7 @@ class _ClientsPageState extends State<ClientsPage> {
                   iconColor: Colors.indigo,
                 ),
                 onDismissed: (direction) {
-                  setState(() {
-                    list.clients.removeAt(index);
-                  });
+                  list.removeClients(index);
                 },
               );
             },
@@ -134,7 +132,7 @@ class _ClientsPageState extends State<ClientsPage> {
                       return TextButton(
                         child: const Text("Salvar"),
                         onPressed: () async {
-                          list.clients.add(Client(name: nomeInput.text, email: emailInput.text, type: dropdownValue));
+                          list.add(Client(name: nomeInput.text, email: emailInput.text, type: dropdownValue));
                         
                           Navigator.pop(context);
                         }
@@ -143,7 +141,7 @@ class _ClientsPageState extends State<ClientsPage> {
                   ),
                   
                   TextButton(
-                    child: const Text("Calcelar"),
+                    child: const Text("Cancelar"),
                     onPressed: () {
                       Navigator.pop(context);
                     }
