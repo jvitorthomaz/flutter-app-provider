@@ -46,7 +46,6 @@ class _ClientTypesPageState extends State<ClientTypesPage> {
           );
         }
       ),
-      
         
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.deepOrange,
